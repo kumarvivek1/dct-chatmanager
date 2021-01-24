@@ -5,7 +5,6 @@ import { Provider } from "react-redux"
 import configStore from "./redux store/store/store"
 import './index.css';
 import App from './App';
-import { addStudents } from './redux store/actions/add.action';
 
 const store = configStore()
 

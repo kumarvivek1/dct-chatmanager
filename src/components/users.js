@@ -1,8 +1,8 @@
 import React, {useEffect,useState } from 'react'
-import { Link } from 'react-router-dom'
 import {useSelector} from "react-redux"
 import Pagination from './pagination'
 import StudentsChart from "./chart"
+
 
 function Users() {
     const students = useSelector(state => state.students)
@@ -48,8 +48,16 @@ function Users() {
                     </li>
                      {
                         list.map((student, i) => {
-                            return <li key={i} className="list-group-item d-flex justify-content-between align-items-center"><Link to={`/users/${i}`}>{student.studentName}</Link>
-                                <span className="badge badge-primary badge-pill">{student.chats.length}</span>
+                            return <li key={i} className="list-group-item d-flex justify-content-between align-items-center">{student.studentName}
+                                <button className="badge badge-primary badge-pill"
+                                    onClick={() => {
+                                        const arr=student.chats.map(ele => {
+                                            return ele.value
+                                        })
+                                        alert(arr)
+                                    }}
+                                >
+                                 {student.chats.length}</button>
                             </li>
                         })
                     }
@@ -66,7 +74,7 @@ function Users() {
                 </div>
             </div>
             <div className="pagination">
-                <Pagination handlePage={handlePage} />
+                <Pagination handlePage={handlePage} length={students.length} />
             </div>
         </div>
     )

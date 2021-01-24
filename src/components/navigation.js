@@ -2,7 +2,6 @@ import React from 'react'
 import { Route,Link } from 'react-router-dom'
 import Home from '../components/home';
 import Users from '../components/users'
-import UserChat from "../components/userChat"
 import '../styles/nav.scss'
 
 function Navigation() {
@@ -18,7 +17,6 @@ function Navigation() {
             <div>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/users" component={Users} />
-                <Route path="/users/:id" component={UserChat} />
             </div>
         </div>
     )
