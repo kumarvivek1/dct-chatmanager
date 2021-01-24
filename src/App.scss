@@ -1,0 +1,47 @@
+.app{
+height: 800px;
+width: 100%;
+background-image:url("./images/white-panel.jpeg");
+}
+.form{
+position: absolute;
+top:30%;
+left:37%;
+width:400px;
+height: 200px;
+background-color: rgb(197, 214, 214);
+border: 1px solid green;
+border-radius: 8px;
+}
+input[type=file]{
+margin-top: 70px;
+padding:10px;
+}
+.users-list{
+width: 90%;
+}
+.searchinput{
+padding:5px;
+width:250px;
+border-radius: 5px;
+}
+.table{
+color:rgb(31, 4, 155);
+font-size: 18px;
+}
+.header{
+color: black;
+background-color: cadetblue;
+}
+.pagination{
+margin-top: 5px;
+margin-left: 5px;
+}
+.col{
+margin:10px;
+}
+
+.student-chart{
+background: transparent;
+margin-top: 30px;
+}
